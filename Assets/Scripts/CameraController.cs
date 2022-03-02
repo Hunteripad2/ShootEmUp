@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [HideInInspector] private Transform player;
+
+    [Header("Borders")]
     [SerializeField] public float borderX = 36f;
     [SerializeField] public float borderY = 34f;
 
-    void Update()
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    private void Update()
     {
         float posX = transform.position.x;
         float posY = transform.position.y;

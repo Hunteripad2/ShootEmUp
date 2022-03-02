@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class LifeForce : MonoBehaviour
 {
-    protected int healthAmount;
-    private Transform effectsFolder;
-    private ScoreCounter score;
+    [HideInInspector] protected int healthAmount;
+    [HideInInspector] private Transform effectsFolder;
+    [HideInInspector] private ScoreCounter score;
 
+    [Header("Parameters")]
     [SerializeField] protected int maxHealth = 1;
     [SerializeField] private int scoreAmount = 0;
+
+    [Header("Effects")]
     [SerializeField] private GameObject deathEffect;
-    [SerializeField] private AudioSource deathSoundEffect;
 
     virtual public void Start()
     {
@@ -20,7 +22,7 @@ public class LifeForce : MonoBehaviour
         score = GameObject.FindGameObjectsWithTag("Score")[0].GetComponent<ScoreCounter>();
     }
 
-    virtual public void takeDamage(int damage)
+    virtual public void TakeDamage(int damage)
     {
         healthAmount -= damage;
 
@@ -32,7 +34,6 @@ public class LifeForce : MonoBehaviour
 
     virtual public void Die()
     {
-        deathSoundEffect.Play();
         Instantiate(deathEffect, transform.position, Quaternion.identity, effectsFolder);
         Destroy(gameObject);
         score.AddScore(scoreAmount);

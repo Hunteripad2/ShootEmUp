@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ParallaxLayer : MonoBehaviour
 {
-    private Vector3 initPos;
-    private Transform mainCam;
+    [HideInInspector] private Vector3 initPos;
+    [HideInInspector] private Transform mainCam;
 
+    [Header("Movement")]
     [SerializeField] private float movementForce = 1f;
-
-    private float movementScaleY = 0.75f;
+    [SerializeField] private float movementScaleY = 0.75f;
 
     private void Start()
     {

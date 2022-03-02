@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class WeaponFiring_Enemy : WeaponFiring
 {
-    private EnemyController enemy;
+    [HideInInspector] private EnemyController enemy;
 
+    [Header("Parameters")]
     [SerializeField] private float minimalDistance = 10f;
 
     override public void Start()

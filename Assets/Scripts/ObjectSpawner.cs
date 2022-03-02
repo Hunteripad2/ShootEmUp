@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    private CameraController cam;
-    private float borderX, borderY;
-    private Transform objectsFolder;
+    [HideInInspector] private CameraController cam;
+    [HideInInspector] private float borderX, borderY;
+    [HideInInspector] private Transform objectsFolder;
 
+    [Header("Parameters")]
     [SerializeField] private GameObject[] initialObjectsPool;
-
     [SerializeField] private int initialObjectsNum = 40;
 
     private void Start()

@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
-    private int highScore;
+    [HideInInspector] private int highScore;
+    [HideInInspector] static private int totalScore;
 
+    [Header("UI")]
     [SerializeField] private Text scoreUI;
     [SerializeField] private Text highScoreUI;
-
-    static private int totalScore = 0;
 
     private void Start()
     {

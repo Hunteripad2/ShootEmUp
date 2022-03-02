@@ -47,3 +47,4 @@ MonoBehaviour:
   maxSeed: 18000
   suicideEnemy: {fileID: 2373243559026468719, guid: 70537bb7d5c4c2144959da80da2db153, type: 3}
   lightEnemy: {fileID: 8675771652192132396, guid: 68d4a81a33d2f064c8a26f759a839fb9, type: 3}
+  heavyEnemy: {fileID: 3969540357380189876, guid: 71e73dcc2ec279048a1a7ed09293873a, type: 3}

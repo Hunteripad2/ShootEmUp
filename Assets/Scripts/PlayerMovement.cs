@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private CameraController cam;
-    private float borderX, borderY;
+    [HideInInspector] private Rigidbody2D rb;
+    [HideInInspector] private CameraController cam;
+    [HideInInspector] private float borderX, borderY;
 
+    [Header("Movement")]
     [SerializeField] private float movementSpeed = 15f;
 
     private void Start()

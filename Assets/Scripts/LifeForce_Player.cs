@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LifeForce_Player : LifeForce
 {
-    private RectTransform healthBar;
+    [HideInInspector] private RectTransform healthBar;
 
+    [Header("Effects")]
     [SerializeField] private AudioSource damageSoundEffect;
 
     override public void Start()
@@ -16,11 +17,16 @@ public class LifeForce_Player : LifeForce
         healthBar = (RectTransform)GameObject.FindGameObjectsWithTag("Health Bar")[0].transform;
     }
 
-    override public void takeDamage(int damage)
+    override public void TakeDamage(int damage)
     {
-        base.takeDamage(damage);
+        base.TakeDamage(damage);
+        UpdateHealthBar();
 
         damageSoundEffect.Play();
+    }
+
+    private void UpdateHealthBar()
+    {
         healthBar.localScale = new Vector2((float)healthAmount / (float)maxHealth, 1);
     }
 

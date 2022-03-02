@@ -301,6 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.55
+  movementScaleY: 0.75
 --- !u!1 &128640515
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,6 +398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.75
+  movementScaleY: 0.75
 --- !u!1 &250395903
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.7
+  movementScaleY: 0.75
 --- !u!212 &250395906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -883,7 +886,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed93078cae21cf4cb96d9ebc35a74f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1187445064}
   borderX: 36
   borderY: 34
 --- !u!20 &519420031
@@ -988,6 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.75
+  movementScaleY: 0.75
 --- !u!212 &601343154
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1166,6 +1169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.6
+  movementScaleY: 0.75
 --- !u!212 &603510699
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1341,6 +1345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.6
+  movementScaleY: 0.75
 --- !u!212 &671667733
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1517,6 +1522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.3
+  movementScaleY: 0.75
 --- !u!212 &897957953
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1881,11 +1887,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1187445064 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5657763556002409216, guid: 5eaecb21c0d37f74ea910132716d5329, type: 3}
-  m_PrefabInstance: {fileID: 5657763554957873736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1214998461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2075,6 +2076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.75
+  movementScaleY: 0.75
 --- !u!212 &1283444185
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2311,6 +2313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.15
+  movementScaleY: 0.75
 --- !u!212 &1607527122
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2521,6 +2524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.5
+  movementScaleY: 0.75
 --- !u!1 &1706711249
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2597,7 @@ GameObject:
   - component: {fileID: 1741964109}
   - component: {fileID: 1741964108}
   - component: {fileID: 1741964107}
+  - component: {fileID: 1741964111}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -2683,6 +2688,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1741964111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1741964106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff06cd8458a15b34992a5b326378b00b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crosshairTexture: {fileID: 2800000, guid: 5960056f1a158354c9d34267efa08f77, type: 3}
+  crosshairOffset: 32
 --- !u!1 &1753133172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,6 +2822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.55
+  movementScaleY: 0.75
 --- !u!212 &1867624055
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3066,6 +3086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.6
+  movementScaleY: 0.75
 --- !u!212 &2070774021
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3163,6 +3184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 0.45
+  movementScaleY: 0.75
 --- !u!212 &2071224981
 SpriteRenderer:
   m_ObjectHideFlags: 0

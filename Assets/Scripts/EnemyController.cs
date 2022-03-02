@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Transform player;
-    private Vector2 playerPos;
-    public float currentDistance;
+    [HideInInspector] private Rigidbody2D rb;
+    [HideInInspector] private Transform player;
+    [HideInInspector] private Vector2 playerPos;
+    [HideInInspector] public float currentDistance;
 
+    [Header("Movement")]
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float optimalDistance = 5f;
+
+    [Header("Collision")]
     [SerializeField] private int collisionDamage = 1;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectsWithTag("Player")[0].transform;
@@ -48,8 +51,8 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            collision.collider.GetComponent<LifeForce>().takeDamage(collisionDamage);
-            GetComponent<LifeForce>().takeDamage(collisionDamage);
+            collision.collider.GetComponent<LifeForce>().TakeDamage(collisionDamage);
+            GetComponent<LifeForce>().TakeDamage(collisionDamage);
         }
     }
 }

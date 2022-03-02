@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private Transform enemiesFolder;
+    [HideInInspector] private Transform enemiesFolder;
 
+    [Header("Randomization")]
     [SerializeField] private float maxSpawnChance = 300f;
     [SerializeField] private float maxSeed = 18000f;
+
+    [Header("Enemies")]
     [SerializeField] private GameObject suicideEnemy;
     [SerializeField] private GameObject lightEnemy;
+    [SerializeField] private GameObject heavyEnemy;
 
     private float spawnChance = 0f;
 
@@ -27,10 +31,13 @@ public class EnemySpawner : MonoBehaviour
         {
             spawnEnemy(suicideEnemy);
         }
-
-        if (Random.Range(0, maxSeed) < Mathf.Min(spawnChance, maxSpawnChance))
+        else if (Random.Range(0, maxSeed) < Mathf.Min(spawnChance, maxSpawnChance))
         {
             spawnEnemy(lightEnemy);
+        }
+        else if (Random.Range(0, maxSeed) < Mathf.Min(spawnChance / 2, maxSpawnChance))
+        {
+            spawnEnemy(heavyEnemy);
         }
     }
 

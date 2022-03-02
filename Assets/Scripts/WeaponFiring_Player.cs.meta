@@ -3,7 +3,9 @@ guid: 1d216a51d3d85d842b0a56410373ca04
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - projectilePrefab: {instanceID: 0}
+  - shootEffect: {fileID: 3374046459629035373, guid: 7ce974fa75f1b244d89c7771cfa70b4b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
